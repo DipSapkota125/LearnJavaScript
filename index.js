@@ -193,15 +193,144 @@
 // console.log(ageGroup >= 18 ? "You can vote" : "You can't");
 
 //Unary Operators
-let x = "123";
-let y = +x; //positive
-console.log(y);
-console.log(typeof y);
+// let x = "123";
+// let y = +x; //positive
+// console.log(y);
+// console.log(typeof y);
 
-const obj = {
-  name: "Sita Devi",
-  age: 56,
-};
+// const obj = {
+//   name: "Sita Devi",
+//   age: 56,
+// };
 
-delete obj.age;
-console.log(obj);
+// delete obj.age;
+// console.log(obj);
+
+//od number
+
+// let email = "ramthapa@gmail.com";
+// let password = "999999999";
+
+// if (email === "ramthapa@gmail.com" && password === "999999999") {
+//   console.log("Login SuccessFully!");
+// } else {
+//   console.log("Invalid Credentials!");
+// }
+
+//See Grade Check
+// let grade = 85;
+// if (grade >= 90) {
+//   console.log("Grade:A+");
+// } else if (grade >= 80) {
+//   console.log("Grade:A");
+// } else if (grade >= 70) {
+//   console.log("Grade:B+");
+// } else if (grade >= 60) {
+//   console.log("Grade:B");
+// } else if (grade >= 50) {
+//   console.log("Grade:c");
+// } else if (grade >= 40) {
+//   console.log("Grade:D");
+// } else {
+//   console.log("Failed");
+// }
+
+//weather
+// let weather = "rainy";
+// if (weather === "sunny") {
+//   console.log("Today is a sunny Day");
+// } else if (weather === "winter") {
+//   console.log("k Yo mahina jado ko hota");
+// } else if (weather === "cloudy") {
+//   console.log("Aja Badal Lagekochata");
+// } else if (weather === "rainy") {
+//   console.log("Little bit rain");
+// } else {
+//   console.log("Invalid weather");
+// }
+
+//switch
+
+// let role = "super admin";
+// switch (role) {
+//   case "buyer":
+//     console.log("You can only buy product");
+//     break;
+
+//   case "seller":
+//     console.log("You can sell your product");
+//     break;
+
+//   case "admin":
+//     console.log("You can add your product");
+//     break;
+
+//   case "super admin":
+//     console.log("You can access everything");
+//     break;
+
+//   default:
+//     console.log("Invalid Role");
+// }
+
+// let date = new Date().getDay();
+// switch (date) {
+//   case 0:
+//     console.log("Today is a Sunday");
+//     break;
+//   case 1:
+//     console.log("Today is a Monday");
+//     break;
+//   case 2:
+//     console.log("Today is a Tuesday");
+//     break;
+//   case 3:
+//     console.log("Today is a Wednesday");
+//     break;
+//   case 4:
+//     console.log("Today is a Thursday");
+//     break;
+
+//   case 5:
+//     console.log("Today is a Friday");
+//     break;
+
+//   case 6:
+//     console.log("Today is a Saturday");
+//     break;
+
+//   default:
+//     console.log("Invalid day");
+// }
+
+//status
+let status = 200;
+
+switch (status) {
+  case 201:
+    console.log("Created");
+    break;
+  case 400:
+    console.log("Bad Request");
+    break;
+
+  case 401:
+    console.log("UnAuthorized");
+    break;
+
+  case 403:
+    console.log("ForBidden");
+    break;
+
+  case 500:
+    console.log("Internal server Error");
+    break;
+
+  case 200:
+    console.log("Ok");
+    break;
+
+  default:
+    console.log("Invalid status");
+    break;
+}
