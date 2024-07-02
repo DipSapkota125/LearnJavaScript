@@ -381,8 +381,175 @@
 //   i++;
 // } while (i <= 10);
 
-const arr = [4, 5, 6, 7, 8, 9];
-console.log(arr);
-console.log(arr[2]);
+// const arr = [4, 3, 5, 6, 7, 8];
+// arr.push("Apple", "Banana");
+// console.log(arr);
 
-console.log(typeof arr);
+//pop
+// const arr = [4, 3, 5, 6, 7, 8];
+// const result = arr.pop();
+// console.log(arr);
+
+//shift
+// const arr = [4, 3, 5, 6, 7, 8];
+// const result = arr.shift();
+// console.log(arr);
+
+//unshift
+// const arr = [4, 3, 5, 6, 7, 8];
+// const result = arr.unshift(9);
+// console.log(arr);
+
+//splice
+// const arr = [3, 4, 5, 6, 7, 8, 9];
+// arr.splice(1, 4, "Apple");
+// console.log(arr);
+
+//slice
+// const arr = [9, 12, 6, 3, 4, 7, 2];
+// arr.splice(1, 3);
+
+// console.log(arr);
+
+//reverse
+
+// const arr = [9, 12, 6, 3, 4, 7, 2];
+// arr.reverse();
+// console.log(arr);
+
+//indexOf
+// const arr = [9, 12, 6, 3, 4, 7, 2, 9];
+// const result = arr.indexOf(9);
+// console.log(result);
+
+// const arr = [8, 9, 7, 6];
+// let sum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// }
+
+// let result = sum * 2;
+
+// console.log(`The Sum of array is:${sum}`);
+// console.log(`The total of sum which is multiply by 2 is:${result}`);
+
+// function myFunc(name) {
+//   console.log(`Hello everyone my name is:${name}`);
+// }
+
+//Array
+// let ans = [3, 4, 5, 6, 7, 8, "Apple", "Banana"]; //data structure
+// console.log(ans[3]);
+
+// let arr = [3, 6, 8, 9, 2, 3, 1];
+
+//indexOf
+// let output = arr.indexOf(3);
+// console.log(output);
+
+//lastIndexOf
+// let output = arr.lastIndexOf(3);
+// console.log(output);
+
+//splice
+// arr.splice(1, 3);
+// console.log(arr);
+
+//slice
+
+//length
+// console.log(arr.length);
+//push
+// let result = arr.push(12);
+// console.log(arr);
+
+//pop
+// arr.pop();
+// console.log(arr);
+
+//shift
+// arr.shift()
+// console.log(arr)
+
+//unshift
+// arr.unshift(14)
+// console.log(arr)
+
+//includes
+// let result = arr.includes(4);
+// console.log(result);
+
+// const output = ["Hello", "World", "JavaScript", "is", "Fun"];
+// console.log(output.join(" "));
+
+// let arr = [];
+// let sum = 0;
+
+// for (let i = 1; i <= 10; i++) {
+//   arr.push(i);
+// }
+
+// console.log(arr);
+
+// for (let i = 1; i < arr.length; i++) {
+//   sum += arr[i];
+// }
+
+// let result = sum * 2;
+
+// console.log(`The Sum of arr is:${sum}`);
+// console.log(`The multiply of sum is:${result}`);
+
+//Object
+// const person = {
+//   name: "John Doe",
+//   age: 24,
+//   occupation: "agriculture",
+//   education: "Bsc hons",
+//   isMarried: false,
+//   address: {
+//     street: "Dillibazar",
+//     city: "kathmandu",
+//     country: "Nepal",
+//   },
+
+//   greet: function () {
+//     console.log(`Hello My name is:${this.name}.And I am ${this.age} years old`);
+//   },
+// };
+
+// const {
+//   name,
+//   age,
+//   education,
+//   occupation,
+//   isMarried,
+//   address: { street, city, country },
+// } = person;
+// console.log(name, age, education, occupation, isMarried, street, city, country);
+// person.greet();
+
+//function
+
+function myFunc(radius) {
+  return Math.PI * radius * radius;
+}
+
+let ans = myFunc(5);
+console.log(`The Area of circle is:${ans}`);
+
+//CalculateTotal
+function CalculateTotal(cartItems, taxRate) {
+  let total = 0;
+  for (let i = 0; i < cartItems.length; i++) {
+    total += cartItems[i].price * cartItems[i].quantity;
+  }
+  total += total * taxRate;
+  return total;
+}
+let cart = [
+  { name: "Dr Martin", price: 8000, quantity: 1 },
+  { name: "SB Dunk", price: 4000, quantity: 2 },
+];
+const result = CalculateTotal(cart, 0.02);
+console.log(`Your full and final payment is:${result}`);
