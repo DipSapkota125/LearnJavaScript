@@ -531,25 +531,161 @@
 
 //function
 
-function myFunc(radius) {
-  return Math.PI * radius * radius;
+// function myFunc(radius) {
+//   return Math.PI * radius * radius;
+// }
+
+// let ans = myFunc(5);
+// console.log(`The Area of circle is:${ans}`);
+
+// //CalculateTotal
+// function CalculateTotal(cartItems, taxRate) {
+//   let total = 0;
+//   for (let i = 0; i < cartItems.length; i++) {
+//     total += cartItems[i].price * cartItems[i].quantity;
+//   }
+//   total += total * taxRate;
+//   return total;
+// }
+// let cart = [
+//   { name: "Dr Martin", price: 8000, quantity: 1 },
+//   { name: "SB Dunk", price: 4000, quantity: 2 },
+// ];
+// const result = CalculateTotal(cart, 0.02);
+// console.log(`Your full and final payment is:${result}`);
+
+// const arr = [4, 3, 5, 6, 7, 8, 9, 1, 2];
+// arr.forEach((value)=>{
+//       value +=20
+//       console.log(value)
+// })
+
+// console.log(arr)
+
+// let output = arr.every((value) => value > 2);
+// console.log(output);
+
+// const ans = arr.forEach((value) => value * 5);
+// console.log(ans);
+
+//find
+// let result = arr.find((value, index) => value > 2);
+
+// console.log(result);
+
+//filter
+// let result = arr.filter((value, index) => value > 6);
+
+// console.log(result);
+
+// const products = [
+//   { name: "Laptop", price: 120000, inStock: true },
+//   { name: "Phone", price: 120000, inStock: false },
+//   { name: "Tab", price: 120000, inStock: true },
+// ];
+
+// let show = products.filter((value, index) => value.inStock === false);
+// console.log(show);
+
+// const products = [
+//   { name: "Laptop", price: 120000, inStock: true },
+//   { name: "Phone", price: 30000, inStock: false },
+//   { name: "Tab", price: 40000, inStock: true },
+// ];
+
+// let show = products.reduce((total, value) => total + value.price, 0);
+
+// console.log(show);
+
+// function myFunc() {
+//   let a = prompt("Enter first Number?");
+//   let b = prompt("Enter second Number?");
+//   let result = Number(a) + Number(b);
+//   if (result) {
+//     alert(`The Sum of Two number is: ${result}`);
+//   }
+// }
+
+// myFunc();
+
+//Scoping
+// function myFunc() {
+//   if (true) {
+//     var x = 90;
+//     let y = 70;
+//     const z = 30;
+//     console.log(y);
+//     console.log(z);
+//   }
+//   console.log(x);
+// }
+
+// myFunc();
+
+//DOM
+
+//
+let result = document.getElementById("hello");
+result.innerText = "I have many Proof";
+result.style.backgroundColor = "red";
+result.style.color = "white";
+result.style.textAlign = "center";
+
+let output = document.getElementsByClassName("myClass")[0];
+
+output.innerText = "Yo bramandama hami ago ko jhilko";
+output.style.backgroundColor = "blue";
+output.style.color = "white";
+output.style.textAlign = "center";
+
+let ans = document.getElementsByClassName("myClass");
+
+ans[1].innerText = "It's gone a better";
+ans[1].style.backgroundColor = "yellow";
+ans[1].style.color = "black";
+ans[1].style.textAlign = "center";
+
+let show = document.getElementsByTagName("span");
+
+show[0].innerText = "Haina k ho yesto yo,Chhaka parchu";
+show[0].style.backgroundColor = "gray";
+show[0].style.color = "white";
+show[0].style.textAlign = "center";
+
+let x = document.getElementsByTagName("span");
+
+x[1].innerText = "Kinanki Nepal ma oppurtunities yekdamai kam cha";
+x[1].style.backgroundColor = "pink";
+x[1].style.color = "white";
+x[1].style.textAlign = "center";
+
+let y = document.querySelector("#btnAdd");
+y.style.backgroundColor = "blue";
+y.style.color = "white";
+y.style.padding = "2vmax 4vmax";
+y.style.cursor = "pointer";
+y.style.border = "none";
+
+y.setAttribute("class", "meroClass");
+console.log(y.getAttribute("class"));
+
+let v = document.querySelector(".btnDelete");
+v.style.backgroundColor = "red";
+v.style.color = "white";
+v.style.padding = "2vmax 4vmax";
+v.style.cursor = "pointer";
+v.style.border = "none";
+
+function addTask() {
+  let display = document.createElement("h1");
+  display.innerText = "Task 1";
+  document.body.prepend(display);
 }
 
-let ans = myFunc(5);
-console.log(`The Area of circle is:${ans}`);
-
-//CalculateTotal
-function CalculateTotal(cartItems, taxRate) {
-  let total = 0;
-  for (let i = 0; i < cartItems.length; i++) {
-    total += cartItems[i].price * cartItems[i].quantity;
-  }
-  total += total * taxRate;
-  return total;
+function deleteTask() {
+  let h1 = document.querySelector("h1");
+  h1.remove();
 }
-let cart = [
-  { name: "Dr Martin", price: 8000, quantity: 1 },
-  { name: "SB Dunk", price: 4000, quantity: 2 },
-];
-const result = CalculateTotal(cart, 0.02);
-console.log(`Your full and final payment is:${result}`);
+
+y.onclick = addTask;
+v.onclick = deleteTask;
