@@ -690,14 +690,224 @@
 // y.onclick = addTask;
 // v.onclick = deleteTask;
 
-let result = document.querySelectorAll("button");
-result[0].style.backgroundColor = "red";
-result[0].style.color = "white";
-result[0].style.padding = "2vmax 4vmax";
-result[0].style.border = "none";
+// let result = document.querySelectorAll("button");
+// result[0].style.backgroundColor = "red";
+// result[0].style.color = "white";
+// result[0].style.padding = "2vmax 4vmax";
+// result[0].style.border = "none";
 
-let output = document.querySelectorAll("button");
-output[1].style.backgroundColor = "blue";
-output[1].style.color = "white";
-output[1].style.padding = "2vmax 4vmax";
-output[1].style.border = "none";
+// let output = document.querySelectorAll("button");
+// output[1].style.backgroundColor = "blue";
+// output[1].style.color = "white";
+// output[1].style.padding = "2vmax 4vmax";
+// output[1].style.border = "none";
+
+// function myFunc(name, age) {
+//   console.log(`Hello My name is:${name}.And I am ${age}years old!`);
+// }
+
+// myFunc("Ram Thapa", 23);
+
+//Advance Array Method;
+
+const arr = [3, 6, 7, 8, 9, 4, 2, 1];
+//find
+
+// let output = arr.find((value, index) => value > 6);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Martin", price: 8000, inStock: true },
+//   { id: 2, name: "TimberLand", price: 10000, inStock: true },
+//   { id: 3, name: "SB Dunk", price: 8000, inStock: false },
+//   { id: 4, name: "Air force 1", price: 7000, inStock: true },
+// ];
+
+// let result = products.find((value, index) => value.inStock);
+// console.log(result);
+
+//filter
+// let output = arr.filter((value, index) => value > 6);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Martin", price: 8000, inStock: true },
+//   { id: 2, name: "TimberLand", price: 10000, inStock: true },
+//   { id: 3, name: "SB Dunk", price: 8000, inStock: false },
+//   { id: 4, name: "Air force 1", price: 7000, inStock: true },
+// ];
+
+// let result = products.filter((value, index) => !value.inStock);
+// console.log(result);
+
+//some
+// let output = arr.some((value, index) => value > 6);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Martin", price: 8000, inStock: true },
+//   { id: 2, name: "TimberLand", price: 10000, inStock: true },
+//   { id: 3, name: "SB Dunk", price: 8000, inStock: false },
+//   { id: 4, name: "Air force 1", price: 7000, inStock: true },
+// ];
+
+// let result = products.some((value, index) => !value.inStock);
+// console.log(result);
+
+// let output = arr.every((value, index) => value > 6);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Martin", price: 8000, inStock: true },
+//   { id: 2, name: "TimberLand", price: 10000, inStock: true },
+//   { id: 3, name: "SB Dunk", price: 8000, inStock: false },
+//   { id: 4, name: "Air force 1", price: 7000, inStock: true },
+// ];
+
+// let result = products.every((value, index) => !value.inStock);
+// console.log(result);
+
+//forEach
+// arr.forEach((value, index) => console.log(value + 2));
+
+// const products = [
+//   { id: 1, name: "Martin", price: 8000, inStock: true },
+//   { id: 2, name: "TimberLand", price: 10000, inStock: true },
+//   { id: 3, name: "SB Dunk", price: 8000, inStock: false },
+//   { id: 4, name: "Air force 1", price: 7000, inStock: true },
+// ];
+// products.forEach((value, index) => console.log(value.name));
+
+// let result = arr.map((value, index) => value * 4);
+// console.log(result);
+
+//
+// let btn = document.querySelectorAll("button");
+// btn[0].innerText = "HeyBtn";
+// btn[0].style.backgroundColor = "blue";
+// btn[0].style.color = "white";
+// btn[0].style.padding = "2vmax 4vmax";
+// btn[0].style.border = "none";
+
+// let output = document.querySelectorAll("button");
+// output[1].innerText = "clickME";
+// output[1].style.backgroundColor = "red";
+// output[1].style.color = "white";
+// output[1].style.padding = "2vmax 4vmax";
+// output[1].style.border = "none";
+
+// function myFunc(name, age) {
+//   console.log(`Hello My name is: ${name}. And i am ${age} years old`);
+// }
+
+// myFunc("Ram Thapa", 23);
+
+// const meroFunc = (name, age) => {
+//   console.log(`Hello My name is: ${name}. And i am ${age} years old`);
+// };
+
+// meroFunc("Sita Devi", 24);
+
+//Advance Array Method
+let newArr = [4, 5, 6, 7, 8, 9, 3, 1, 2];
+// //find
+
+// let output = newArr.find((value, index) => value > 6);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "SB Dunk", price: 9000, inStock: false },
+//   { id: 3, name: "Air Force 1", price: 6000, inStock: true },
+//   { id: 4, name: "Travis Cott", price: 7000, inStock: true },
+// ];
+
+// let ans = products.find((value,index)=>value.inStock)
+// console.log(ans)
+
+//filter
+
+// let output = newArr.filter((value, index) => value > 6);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "SB Dunk", price: 9000, inStock: false },
+//   { id: 3, name: "Air Force 1", price: 6000, inStock: true },
+//   { id: 4, name: "Travis Cott", price: 7000, inStock: true },
+// ];
+
+// let ans = products.filter((value, index) => value.inStock);
+// console.log(ans);
+
+//some
+// let output = newArr.some((value, index) => value > 6);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "SB Dunk", price: 9000, inStock: false },
+//   { id: 3, name: "Air Force 1", price: 6000, inStock: true },
+//   { id: 4, name: "Travis Cott", price: 7000, inStock: true },
+// ];
+
+// let ans = products.some((value, index) => value.inStock);
+// console.log(ans);
+
+//every
+// let output = newArr.every((value, index) => value > 6);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "SB Dunk", price: 9000, inStock: false },
+//   { id: 3, name: "Air Force 1", price: 6000, inStock: true },
+//   { id: 4, name: "Travis Cott", price: 7000, inStock: true },
+// ];
+
+// let ans = products.every((value, index) => value.inStock);
+// console.log(ans);
+
+//forEach
+// let output = newArr.forEach((value, index) => value * 2);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "SB Dunk", price: 9000, inStock: false },
+//   { id: 3, name: "Air Force 1", price: 6000, inStock: true },
+//   { id: 4, name: "Travis Cott", price: 7000, inStock: true },
+// ];
+
+// let ans = products.forEach((value, index) => value.name);
+// console.log(ans);
+
+//map
+// let output = newArr.map((value, index) => value * 2);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "SB Dunk", price: 9000, inStock: false },
+//   { id: 3, name: "Air Force 1", price: 6000, inStock: true },
+//   { id: 4, name: "Travis Cott", price: 7000, inStock: true },
+// ];
+
+// let ans = products.map((value, index) => value.name);
+// let display = document.createElement("h2");
+// display.innerText = ans;
+// document.body.prepend(display);
+
+//reduce
+let output = newArr.reduce((accum, curValue) => accum + curValue);
+console.log(output); //single return element
+
+const products = [
+  { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+  { id: 2, name: "SB Dunk", price: 9000, inStock: false },
+  { id: 3, name: "Air Force 1", price: 6000, inStock: true },
+  { id: 4, name: "Travis Cott", price: 7000, inStock: true },
+];
+
+let ans = products.reduce((total, curValue) => total + curValue.price, 0);
+console.log(ans);
