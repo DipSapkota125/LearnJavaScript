@@ -899,15 +899,123 @@ let newArr = [4, 5, 6, 7, 8, 9, 3, 1, 2];
 // document.body.prepend(display);
 
 //reduce
-let output = newArr.reduce((accum, curValue) => accum + curValue);
-console.log(output); //single return element
+// let output = newArr.reduce((accum, curValue) => accum + curValue);
+// console.log(output); //single return element
 
-const products = [
-  { id: 1, name: "Dr Martin", price: 8000, inStock: true },
-  { id: 2, name: "SB Dunk", price: 9000, inStock: false },
-  { id: 3, name: "Air Force 1", price: 6000, inStock: true },
-  { id: 4, name: "Travis Cott", price: 7000, inStock: true },
-];
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "SB Dunk", price: 9000, inStock: false },
+//   { id: 3, name: "Air Force 1", price: 6000, inStock: true },
+//   { id: 4, name: "Travis Cott", price: 7000, inStock: true },
+// ];
 
-let ans = products.reduce((total, curValue) => total + curValue.price, 0);
-console.log(ans);
+// let ans = products.reduce((total, curValue) => total + curValue.price, 0);
+// console.log(ans);
+
+// let heading = document.getElementById("heading");
+// let box = document.getElementById("box1");
+// let btnClick = document.getElementById("btnClick");
+// let input = document.querySelector("input");
+
+// btnClick.style.backgroundColor = "blue";
+// btnClick.style.color = "white";
+// btnClick.style.padding = "20px";
+// btnClick.style.border = "none";
+// btnClick.style.cursor = "pointer";
+
+// btnClick.addEventListener("click", () => {
+//   box.classList.add("classBox");
+// });
+
+// btnClick.addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+//   btnClick.style.backgroundColor = "gray";
+// });
+
+// btnClick.addEventListener("dblclick", () => {
+//   document.body.style.backgroundColor = "black";
+// });
+// btnClick.addEventListener("click", () => {
+//   document.body.style.backgroundColor = "";
+// });
+
+// window.addEventListener("click", (e) => {
+//   console.log(e.clientX);
+//   console.log(e.clientY);
+// });
+
+// // window.addEventListener("contextmenu", (e) => {
+// //   e.preventDefault();
+// // });
+
+// box.addEventListener("mouseover", () => {
+//   btnClick.style.transform = "scale(1.1)";
+//   heading.innerText = "Sirkar KP Oli kai hota";
+//   heading.style.backgroundColor = "purple";
+//   heading.style.color = "red";
+// });
+
+// box.addEventListener("mouseout", () => {
+//   btnClick.style.transform = "";
+//   heading.innerText = "";
+//   heading.style.backgroundColor = "";
+//   heading.style.color = "";
+// });
+
+// input.addEventListener("change", (e) => {
+//   console.log(e.target.value);
+//   console.log("changing");
+// });
+
+//Math Object
+// let num = 4.7;
+// let ans = Math.round(num);
+// console.log(ans);
+
+// let output = Math.random();
+// console.log(output);
+
+// let num = 9;
+// let result = Math.sqrt(num);
+// console.log(result);
+
+// let num = 4.9;
+// let result = Math.floor(num);
+// console.log(result);
+
+// let num = 4.2;
+// let result = Math.ceil(num);
+// console.log(result);
+
+// let base = 2;
+// let extonent = 3;
+// let output = Math.pow(base, extonent);
+// console.log(output);
+
+// function Subtract(a, b) {
+//   let result = a - b;
+//   return Math.abs(result);
+// }
+
+// let output = Subtract(2, 5);
+// console.log(output);
+
+// function GenerateOTP() {
+//   let otp = Math.floor(100000 + Math.random() * 900000);
+//   return otp;
+// }
+
+// let ans = GenerateOTP();
+// console.log(ans);
+
+// let num = Math.max(1,3,4,5,6,7,8)
+// console.log(num)
+
+// let result = Math.min(1, 3, 4, 5, 6, 7, 8);
+// console.log(result);
+
+// let now = new Date().getFullYear();
+// console.log(now);
+
+let now = new Date().getMonth();
+console.log(now);

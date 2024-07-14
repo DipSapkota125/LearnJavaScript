@@ -1,5 +1,9 @@
-.hello {
+.classBox {
   background-color: red;
+  padding: 20px;
+  width: 50%;
+  height: 50%;
   color: white;
-  text-align: center;
+  cursor: pointer;
+  border: none;
 }
