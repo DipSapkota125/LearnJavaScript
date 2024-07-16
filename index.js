@@ -710,7 +710,7 @@
 
 //Advance Array Method;
 
-const arr = [3, 6, 7, 8, 9, 4, 2, 1];
+// const arr = [3, 6, 7, 8, 9, 4, 2, 1];
 //find
 
 // let output = arr.find((value, index) => value > 6);
@@ -1020,20 +1020,20 @@ let newArr = [4, 5, 6, 7, 8, 9, 3, 1, 2];
 // let now = new Date().getMonth();
 // console.log(now);
 
-let input = document.getElementById("myInput");
-let btnAdd = document.getElementById("btnAdd");
-let btnRemove = document.getElementById("btnRemove");
-const myFunc = () => {
-  localStorage.setItem(
-    "key1",
-    JSON.stringify({ name: "Yamal", age: 17, isMarried: false })
-  );
-};
-btnAdd.addEventListener("click", myFunc);
-btnRemove.addEventListener("click", () => {
-  localStorage.removeItem("key1");
-});
+// let input = document.getElementById("myInput");
+// let btnAdd = document.getElementById("btnAdd");
+// let btnRemove = document.getElementById("btnRemove");
+// const myFunc = () => {
+//   localStorage.setItem(
+//     "key1",
+//     JSON.stringify({ name: "Yamal", age: 17, isMarried: false })
+//   );
+// };
+// btnAdd.addEventListener("click", myFunc);
+// btnRemove.addEventListener("click", () => {
+//   localStorage.removeItem("key1");
+// });
 
-if (localStorage.getItem("key1")) {
-  console.log(JSON.parse(localStorage.getItem("key1")));
-}
+// if (localStorage.getItem("key1")) {
+//   console.log(JSON.parse(localStorage.getItem("key1")));
+// }
