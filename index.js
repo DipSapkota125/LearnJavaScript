@@ -1037,3 +1037,82 @@ let newArr = [4, 5, 6, 7, 8, 9, 3, 1, 2];
 // if (localStorage.getItem("key1")) {
 //   console.log(JSON.parse(localStorage.getItem("key1")));
 // }
+
+// setTimeout(() => {
+//   let result = 7 + 8;
+//   console.log(`The sum of Two number is: ${result}`);
+// }, 1000);
+
+// setInterval(() => {
+//   console.log("DeadPool and wolverine");
+// }, 1000);
+
+// function UpdateClock() {
+//   const clock = document.querySelector(".clock");
+//   const now = new Date();
+//   let hours = now.getHours().toString().padStart(2, "0");
+//   let minutes = now.getMinutes().toString().padStart(2, "0");
+//   let seconds = now.getSeconds().toString().padStart(2, "0");
+
+//   clock.innerHTML = `${hours}:${minutes}:${seconds}`;
+// }
+
+// setInterval(UpdateClock, 1000);
+
+// function BankAccount(customerName, balance = 0) {
+//   this.customerName = customerName;
+//   this.balance = balance;
+//   this.accountNumber = Date.now();
+
+//   this.deposit = function (amount) {
+//     this.balance += amount;
+//   };
+
+//   this.withdraw = (amount) => {
+//     this.balance -= amount;
+//   };
+// }
+
+// const addForm = document.querySelector("#myForm");
+// const customerName = document.querySelector("#customerName");
+// const myBalance = document.querySelector("#balance");
+
+// const depositForm = document.querySelector("#depositForm");
+// const accountNumber = document.querySelector("#accountNumber");
+// const amount = document.querySelector("#amount");
+
+// const withdrawForm = document.querySelector("#withdrawForm");
+// const withDrawNumber = document.querySelector("#withdrawNumber");
+// const withDrawAmount = document.querySelector("#withdrawAmount");
+
+// let accounts = [];
+
+// addForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   const account = new BankAccount(customerName.value, +myBalance.value);
+//   accounts.push(account);
+
+//   console.log(accounts);
+// });
+
+// depositForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   let account = accounts.find(
+//     (account) => account.accountNumber === +accountNumber.value
+//   );
+//   account.deposit(+amount.value);
+//   console.log(accounts);
+// });
+
+// withdrawForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   let account = accounts.find(
+//     (account) => account.accountNumber === +withDrawNumber.value
+//   );
+//   account.withdraw(+withDrawAmount.value);
+
+//   console.log(accounts);
+// });
