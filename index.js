@@ -1116,3 +1116,132 @@ let newArr = [4, 5, 6, 7, 8, 9, 3, 1, 2];
 
 //   console.log(accounts);
 // });
+
+//setTimeOut
+// setTimeout(() => {
+//   console.log("I Love JavaScript");
+// }, 2000);
+
+// setInterval(() => {
+//   console.log("I Love JavaScript");
+// }, 1000);
+
+// const intervalId = setInterval(() => {
+//   console.log("I Love JavaScript");
+// }, 1000);
+
+// setTimeout(() => {
+//   clearInterval(intervalId);
+// }, 5000);
+
+// function UpdateClock() {
+//   const clock = document.querySelector(".clock");
+//   const now = new Date();
+//   const hours = now.getHours().toString().padStart(2, "0");
+//   const minutes = now.getMinutes().toString().padStart(2, "0");
+//   const seconds = now.getSeconds().toString().padStart(2, "0");
+
+//   clock.innerHTML = `${hours}:${minutes}:${seconds}`;
+// }
+// setInterval(UpdateClock, 1000);
+
+//OOP(JAVASCRIPT)
+
+// function Person(name, age, address) {
+//   this.name = name;
+//   this.age = age;
+//   this.address = address;
+
+//   this.greeting = function () {
+//     let greet = `Hello my name is${this.name}. I am ${this.age} years old. And I live at ${this.address}`;
+//     return greet;
+//   };
+// }
+// const person1 = new Person("Ram Thapa", 23, "Dillibazar");
+// const person2 = new Person("Sita Yadav", 20, "Maitidevi");
+
+// console.log(person1, person2);
+// console.log(person1.greeting());
+
+// function BankAccount(customerName, balance = 0) {
+//   this.customerName = customerName;
+//   this.balance = balance;
+//   this.accountNumber = Date.now();
+// }
+
+// const ramAccount = new BankAccount("Ram Thapa", 4000);
+// const johnAccount = new BankAccount("John Rai", 5000);
+
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance += amount;
+// };
+
+// BankAccount.prototype.withdraw = function (amount) {
+//   this.balance -= amount;
+// };
+
+// ramAccount.deposit(3000);
+// johnAccount.deposit(6000);
+// johnAccount.withdraw(2000);
+
+// console.log(ramAccount, johnAccount);
+
+// const ramAccount = new BankAccount("Ram Thapa", 5000);
+// const shyamAccount = new BankAccount("Shyam Oli", 8000);
+// console.log(ramAccount, shyamAccount);
+
+function BankAccount(customerName, balance = 0) {
+  this.customerName = customerName;
+  this.balance = balance;
+  this.accountNumber = Date.now();
+
+  this.deposit = function (amount) {
+    this.balance += amount;
+  };
+
+  this.withdraw = function (amount) {
+    this.balance -= amount;
+  };
+}
+
+const addForm = document.querySelector("#addForm");
+const customerName = document.querySelector("#customerName");
+const balance = document.querySelector("#balance");
+
+const depositForm = document.querySelector("#depositForm");
+const accountNumber = document.querySelector("#accountNumber");
+const amount = document.querySelector("#amount");
+
+const withdrawForm = document.querySelector("#withdrawForm");
+const withdrawAccountNumber = document.querySelector("#withdrawAccountNumber");
+const withdrawAmount = document.querySelector("#withdrawAmount");
+
+let accounts = [];
+addForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let account = new BankAccount(customerName.value, +balance.value);
+  accounts.push(account);
+
+  console.log(accounts);
+});
+
+depositForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let account = accounts.find(
+    (account) => account.accountNumber === +accountNumber.value
+  );
+  account.deposit(+amount.value);
+
+  console.log(accounts);
+});
+
+withdrawForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let ans = accounts.find(
+    (account) => account.accountNumber === +withdrawAccountNumber.value
+  );
+
+  ans.withdraw(+withdrawAmount.value);
+  console.log(accounts);
+});
