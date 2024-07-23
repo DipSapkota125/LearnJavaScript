@@ -1266,27 +1266,46 @@ let newArr = [4, 5, 6, 7, 8, 9, 3, 1, 2];
 // ramAccount.deposit(3000);
 // console.log(sitaAccount, ramAccount);
 
+//profile management
 class BankAccount {
-  customerName;
-  balance;
   constructor(customerName, balance = 0) {
     this.customerName = customerName;
     this.balance = balance;
-    this.accountNumber = Math.floor(Math.random() * 1000000000);
+    this.accountNumber = Date.now();
   }
-
   deposit(amount) {
     this.balance += amount;
   }
-
   withdraw(amount) {
     this.balance -= amount;
   }
 }
 
-const ramAccount = new BankAccount("Ram Thapa", 4000);
-const shyamAccount = new BankAccount("Shyam Thapa", 4000);
-ramAccount.deposit(9000);
-shyamAccount.deposit(3000);
+class CurrentAccount extends BankAccount {
+  constructor(customerName, balance) {
+    super(customerName, balance);
+  }
 
-console.log(ramAccount, shyamAccount);
+  takeBusinessLoan(amount, taxRate) {
+    let ans = amount + (amount * taxRate) / 100;
+    console.log(`Interest sahid ko loan:${ans}`);
+  }
+}
+
+class SavingAccount extends BankAccount {
+  constructor(customerName, balance) {
+    super(customerName, balance);
+  }
+
+  takePersonalLoan(amount, taxRate) {
+    let ans = amount + (amount * taxRate) / 100;
+    console.log(`Interest sahid ko loan:${ans}`);
+  }
+}
+
+const harkaAccount = new SavingAccount("Harka Rai", 5000);
+const balenAccount = new SavingAccount("Balen Shah", 6000);
+
+harkaAccount.deposit(4000);
+harkaAccount.takePersonalLoan(40000, 10);
+console.log(harkaAccount, balenAccount);
