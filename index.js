@@ -1267,45 +1267,228 @@ let newArr = [4, 5, 6, 7, 8, 9, 3, 1, 2];
 // console.log(sitaAccount, ramAccount);
 
 //profile management
-class BankAccount {
-  constructor(customerName, balance = 0) {
-    this.customerName = customerName;
-    this.balance = balance;
-    this.accountNumber = Date.now();
-  }
-  deposit(amount) {
-    this.balance += amount;
-  }
-  withdraw(amount) {
-    this.balance -= amount;
-  }
-}
+// class BankAccount {
+//   constructor(customerName, balance = 0) {
+//     this.customerName = customerName;
+//     this.balance = balance;
+//     this.accountNumber = Date.now();
+//   }
+//   deposit(amount) {
+//     this.balance += amount;
+//   }
+//   withdraw(amount) {
+//     this.balance -= amount;
+//   }
+// }
 
-class CurrentAccount extends BankAccount {
-  constructor(customerName, balance) {
-    super(customerName, balance);
+// class CurrentAccount extends BankAccount {
+//   constructor(customerName, balance) {
+//     super(customerName, balance);
+//   }
+
+//   takeBusinessLoan(amount, taxRate) {
+//     let ans = amount + (amount * taxRate) / 100;
+//     console.log(`Interest sahid ko loan:${ans}`);
+//   }
+// }
+
+// class SavingAccount extends BankAccount {
+//   constructor(customerName, balance) {
+//     super(customerName, balance);
+//   }
+
+//   takePersonalLoan(amount, taxRate) {
+//     let ans = amount + (amount * taxRate) / 100;
+//     console.log(`Interest sahid ko loan:${ans}`);
+//   }
+// }
+
+// const harkaAccount = new SavingAccount("Harka Rai", 5000);
+// const balenAccount = new SavingAccount("Balen Shah", 6000);
+
+// harkaAccount.deposit(4000);
+// harkaAccount.takePersonalLoan(40000, 10);
+// console.log(harkaAccount, balenAccount);
+
+//Encapsulation
+// class BankAccount {
+//   customerName;
+//   #balance = 0;
+//   accountNumber;
+//   constructor(customerName, balance = 0) {
+//     this.customerName = customerName;
+//     this.#balance = balance;
+//     this.accountNumber = Date.now();
+//   }
+
+//   deposit(amount) {
+//     this.#balance += amount;
+//   }
+
+//   withdraw(amount) {
+//     this.#balance -= amount;
+//   }
+
+//   setBalance(amount) {
+//     this.#balance = amount;
+//   }
+
+//   getBalance(amount) {
+//     return this.#balance;
+//   }
+// }
+
+// const harkaAccount = new BankAccount("Harka Rai", 5000);
+// const balenAccount = new BankAccount("Balen Shah", 8000);
+// balenAccount.setBalance(80000);
+// console.log(balenAccount.getBalance());
+// console.log(harkaAccount, balenAccount);
+
+// class User {
+//   constructor(name, address, age) {
+//     this.name = name;
+//     this.address = address;
+//     this.age = age;
+//   }
+
+//   static compareByAge(a, b) {
+//     return a.age - b.age;
+//   }
+// }
+
+// let user1 = new User("Sita Devi", "Janakpur", 30);
+// let user2 = new User("Hanuman", "Udayapur", 60);
+// let user3 = new User("Ravan", "Lanka", 10);
+
+// const users = [user1, user2, user3];
+// users.sort(User.compareByAge);
+// console.log(users);
+
+// console.log("Hello Wolrd");
+// function Display() {
+//   for (let i = 0; i < 100; i++) {
+//     console.log(i);
+//   }
+// }
+
+// Display();
+
+// setTimeout(() => {
+//   alert("I Love JavaScript");
+// }, 4000);
+
+// console.log("HEy Shivaji");
+
+//CallBack
+
+// function Sum(a, b, cb) {
+//   const ans = a + b;
+//   cb(ans);
+// }
+
+// function Display(result) {
+//   const h1 = document.createElement("h1");
+//   h1.innerText = `The SUm of Result is:${result}`;
+//   document.body.append(h1);
+// }
+
+// Sum(4, 9, Display);
+
+// let arr = [4, 5, 6, 7, 8, 9, 2, 1];
+
+// function Calculate(arr = [], cb) {
+//   let ans = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = cb(arr[i]);
+//     ans.push(element);
+//   }
+
+//   console.log(ans);
+// }
+
+// Calculate(arr, (a) => a*10);
+// Calculate(arr, (a) => a/10);
+
+// arr.forEach((value,undex)=>{})
+
+// let products = [];
+// const AddProduct = (cb) => {
+//   setTimeout(() => {
+//     products.push(
+//       { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//       { id: 2, name: "Air force 1", price: 5000, inStock: true }
+//     );
+
+//     console.log(products);
+//     setTimeout(()=>{
+//       console.log("shdvfhsvd")
+//     },5000)
+//     cb();
+//   }, 4000);
+// };
+
+// const DisplayProduct = () => {
+//   setTimeout(() => {
+//     products.forEach((product) => {
+//       const h1 = document.createElement("h1");
+//       h1.innerText = product.name;
+//       document.body.append(h1);
+//     });
+//   }, 1000);
+// };
+
+// AddProduct(DisplayProduct);
+
+//Promise
+
+// const res = new Promise((resolve, rejected) => {
+//   let success = false;
+//   if (success) {
+//     resolve("Promise fulFilled");
+//   } else {
+//     rejected("Promise Rejected!");
+//   }
+// });
+
+// res.then((param) => console.log(param)).catch((error) => console.log(error));
+
+// const res = new Promise((resolve, rejected) => {
+//   let success = true;
+//   if (success) {
+//     resolve("Promise Fulfilled");
+//   } else {
+//     rejected("Promise Rejected");
+//   }
+// });
+// res.then((param) => console.log(param)).catch((error) => console.log(error));
+
+//fetch
+// const fetchedData = () => {
+//   fetch(`https://catfact.ninja/fact`)
+//     .then((res) => res.json())
+//     .then((data) => {
+//       const h1 = document.createElement("h1");
+//       h1.innerText = data.fact;
+//       document.body.append(h1);
+//     })
+//     .catch((error) => console.log(error));
+// };
+
+// fetchedData();
+
+const fetchedData = async () => {
+  try {
+    const res = await fetch(`https://catfact.ninja/facts`);
+    const data = await res.json();
+    const facts = data.data;
+    facts.forEach((value, index) => {
+      const h1 = document.createElement("h1");
+      h1.innerText = value.fact;
+      document.body.append(h1);
+    });
+  } catch (error) {
+    console.log(error);
   }
+};
 
-  takeBusinessLoan(amount, taxRate) {
-    let ans = amount + (amount * taxRate) / 100;
-    console.log(`Interest sahid ko loan:${ans}`);
-  }
-}
-
-class SavingAccount extends BankAccount {
-  constructor(customerName, balance) {
-    super(customerName, balance);
-  }
-
-  takePersonalLoan(amount, taxRate) {
-    let ans = amount + (amount * taxRate) / 100;
-    console.log(`Interest sahid ko loan:${ans}`);
-  }
-}
-
-const harkaAccount = new SavingAccount("Harka Rai", 5000);
-const balenAccount = new SavingAccount("Balen Shah", 6000);
-
-harkaAccount.deposit(4000);
-harkaAccount.takePersonalLoan(40000, 10);
-console.log(harkaAccount, balenAccount);
+fetchedData();
